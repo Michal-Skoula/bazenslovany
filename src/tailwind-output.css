@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400..700;1,400..700&display=swap");
 
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
@@ -560,7 +560,8 @@ video {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-h1, .h1{
+h1,
+    .h1{
   margin-bottom: 1.25rem;
   font-size: 2.5rem;
   font-weight: 700;
@@ -571,12 +572,14 @@ h1, .h1{
 }
 
 @media (min-width: 26rem){
-  h1, .h1{
+  h1,
+    .h1{
     font-size: 3.75rem;
   }
 }
 
-h2, .h2{
+h2,
+    .h2{
   margin-bottom: 0.75rem;
   margin-top: 0.5rem;
   font-size: 2.3rem;
@@ -587,7 +590,8 @@ h2, .h2{
   color: hsl(216 100% 17.1% / var(--tw-text-opacity, 1));
 }
 
-h3, .h3{
+h3,
+    .h3{
   margin-bottom: 0.75rem;
   margin-top: 0.5rem;
   font-size: 1.65rem;
@@ -598,7 +602,8 @@ h3, .h3{
   color: hsl(216 100% 17.1% / var(--tw-text-opacity, 1));
 }
 
-h4, .h4{
+h4,
+    .h4{
   margin-bottom: 0.375rem;
   margin-top: 0.5rem;
   font-size: 1.3rem;
@@ -609,7 +614,8 @@ h4, .h4{
   color: hsl(216 100% 17.1% / var(--tw-text-opacity, 1));
 }
 
-h5, .h5{
+h5,
+    .h5{
   margin-bottom: 0.375rem;
   margin-top: 0.375rem;
   font-size: 1.15rem;
@@ -620,7 +626,11 @@ h5, .h5{
   color: hsl(216 100% 17.1% / var(--tw-text-opacity, 1));
 }
 
-p, ul, li, a, .p{
+p,
+    ul,
+    li,
+    a,
+    .p{
   margin-bottom: 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
@@ -670,20 +680,22 @@ ol li{
   list-style-type: decimal;
 }
 
-small, .small{
+small,
+    .small{
   font-size: 0.875rem;
   --tw-text-opacity: 1;
   color: hsl(0 0% 6.3% / var(--tw-text-opacity, 1));
 }
 
-body, html{
+body,
+    html{
   width: 100vw;
   max-width: 100%;
 }
 
 nav {
-  left: 50%;
-  transform: translateX(-50%);
+  /* left: 50%;
+        transform: translateX(-50%); */
 }
 
 header *{
@@ -695,7 +707,8 @@ figcaption {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0%) 54%, rgba(0, 0, 0, 60%) 100%);
 }
 
-section, .section{
+section,
+    .section{
   max-width: 100%;
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -704,7 +717,8 @@ section, .section{
 }
 
 @media (min-width: 35rem){
-  section, .section{
+  section,
+    .section{
     padding-top: 6rem;
     padding-bottom: 6rem;
     padding-left: 2rem;
@@ -713,7 +727,8 @@ section, .section{
 }
 
 @media (min-width: 52rem){
-  section, .section{
+  section,
+    .section{
     padding-top: 5rem;
     padding-bottom: 5rem;
     padding-left: 3rem;
@@ -728,13 +743,17 @@ table{
   border-radius: 0.5rem;
 }
 
-tr, th, td{
+tr,
+    th,
+    td{
   padding: 0.75rem;
   text-align: center;
 }
 
 @media (min-width: 35rem){
-  tr, th, td{
+  tr,
+    th,
+    td{
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: 1.5rem;
@@ -791,11 +810,18 @@ img{
 }
 
 footer {
-  h2, h3, h4, h5, b, strong{
+  h2,
+        h3,
+        h4,
+        h5,
+        b,
+        strong{
     --tw-text-opacity: 1;
     color: hsl(0 0% 80% / var(--tw-text-opacity, 1));
   }
-  b, p, a{
+  b,
+        p,
+        a{
     --tw-text-opacity: 1;
     color: hsl(0 0% 80% / var(--tw-text-opacity, 1));
   }
@@ -845,7 +871,7 @@ footer {
 
 #hero::before {
   /* TODO: FIX - gradient */
-  content: '';
+  content: "";
   background: linear-gradient(132.498deg, rgba(19, 19, 19, 66%) 62%, rgba(19, 19, 19, 36%) 89%, rgba(19, 19, 19, 0%) 100%);
   pointer-events: none;
   position: absolute;
@@ -871,7 +897,7 @@ footer {
 .ico-link-arrow::after {
   content: "⟶";
   text-decoration: none;
-  padding-left:0.25rem;
+  padding-left: 0.25rem;
   transition: padding 150ms ease-in-out;
   display: inline-block;
 }
@@ -881,7 +907,7 @@ footer {
 }
 
 .ico-faq::after {
-  content:url(../assets/ico-open-right.svg);
+  content: url(../assets/ico-open-right.svg);
   position: absolute;
   right: 1rem;
   top: 0.885rem;
@@ -968,10 +994,6 @@ input[type="checkbox"]:checked + label.ico-faq::after{
 
 .mb-6{
   margin-bottom: 1.5rem;
-}
-
-.mb-\[-0\.5rem\]{
-  margin-bottom: -0.5rem;
 }
 
 .mb-\[-0\.6rem\]{
@@ -1185,6 +1207,10 @@ input[type="checkbox"]:checked + label.ico-faq::after{
 .rounded-b-lg{
   border-bottom-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
+}
+
+.border{
+  border-width: 1px;
 }
 
 .border-l-4{
