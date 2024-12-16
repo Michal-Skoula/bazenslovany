@@ -870,7 +870,6 @@ footer {
 }
 
 #hero::before {
-  /* TODO: FIX - gradient */
   content: "";
   background: linear-gradient(132.498deg, rgba(19, 19, 19, 66%) 62%, rgba(19, 19, 19, 36%) 89%, rgba(19, 19, 19, 0%) 100%);
   pointer-events: none;
@@ -886,7 +885,7 @@ footer {
 #hero::after {
   content: url(../assets/wave.svg);
   position: absolute;
-  bottom: -0.375rem;
+  bottom: -0.44rem;
   left: 0px;
   z-index: 2;
   display: block;
@@ -927,6 +926,18 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .fixed{
   position: fixed;
 }
@@ -937,6 +948,10 @@ input[type="checkbox"]:checked + label.ico-faq::after{
 
 .relative{
   position: relative;
+}
+
+.-inset-0\.5{
+  inset: -0.125rem;
 }
 
 .bottom-0{
@@ -971,6 +986,11 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   margin: 0px;
 }
 
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .my-4{
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -998,6 +1018,10 @@ input[type="checkbox"]:checked + label.ico-faq::after{
 
 .mb-\[-0\.6rem\]{
   margin-bottom: -0.6rem;
+}
+
+.ml-4{
+  margin-left: 1rem;
 }
 
 .ml-\[0\.125rem\]{
@@ -1032,6 +1056,10 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   display: flex;
 }
 
+.inline-flex{
+  display: inline-flex;
+}
+
 .table{
   display: table;
 }
@@ -1056,6 +1084,11 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   aspect-ratio: 1 / 1;
 }
 
+.size-6{
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .h-16{
   height: 4rem;
 }
@@ -1076,12 +1109,34 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   width: 20rem;
 }
 
+.w-auto{
+  width: auto;
+}
+
 .w-full{
   width: 100%;
 }
 
 .max-w-\[45rem\]{
   max-width: 45rem;
+}
+
+.max-w-content{
+  max-width: 68.75rem;
+}
+
+.shrink-0{
+  flex-shrink: 0;
+}
+
+.translate-y-0{
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-\[-100\%\]{
+  --tw-translate-y: -100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .scale-\[1\.01\]{
@@ -1176,6 +1231,18 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   row-gap: 2rem;
 }
 
+.space-x-4 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-1 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+}
+
 .overflow-hidden{
   overflow: hidden;
 }
@@ -1194,6 +1261,10 @@ input[type="checkbox"]:checked + label.ico-faq::after{
 
 .rounded-lg{
   border-radius: 1rem;
+}
+
+.rounded-md{
+  border-radius: 0.375rem;
 }
 
 .rounded-none{
@@ -1217,9 +1288,9 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   border-left-width: 4px;
 }
 
-.border-l-blue-500{
+.border-l-blue-600{
   --tw-border-opacity: 1;
-  border-left-color: rgb(59 130 246 / var(--tw-border-opacity, 1));
+  border-left-color: rgb(37 99 235 / var(--tw-border-opacity, 1));
 }
 
 .border-l-red-500{
@@ -1267,9 +1338,24 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   background-color: hsl(0 0% 94.9% / var(--tw-bg-opacity, 1));
 }
 
+.bg-bs-white{
+  --tw-bg-opacity: 1;
+  background-color: hsl(0 0% 100% / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-900{
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
+}
+
 .bg-red-200{
   --tw-bg-opacity: 1;
   background-color: rgb(254 202 202 / var(--tw-bg-opacity, 1));
+}
+
+.bg-red-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity, 1));
 }
 
 .bg-yellow-100{
@@ -1285,9 +1371,17 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   --tw-bg-opacity: 0.45;
 }
 
+.bg-none{
+  background-image: none;
+}
+
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.p-2{
+  padding: 0.5rem;
 }
 
 .p-3{
@@ -1305,6 +1399,11 @@ input[type="checkbox"]:checked + label.ico-faq::after{
 .px-10{
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+}
+
+.px-2{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .px-20{
@@ -1332,6 +1431,11 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   padding-right: 2rem;
 }
 
+.py-2{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -1357,8 +1461,20 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   padding-bottom: 2rem;
 }
 
+.pb-3{
+  padding-bottom: 0.75rem;
+}
+
 .pb-6{
   padding-bottom: 1.5rem;
+}
+
+.pt-12{
+  padding-top: 3rem;
+}
+
+.pt-2{
+  padding-top: 0.5rem;
 }
 
 .pt-4{
@@ -1369,12 +1485,22 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   text-align: center;
 }
 
+.text-base{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .text-h4{
   font-size: 1.3rem;
 }
 
 .text-h5{
   font-size: 1.15rem;
+}
+
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .font-bold{
@@ -1433,6 +1559,16 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   color: hsl(50 100% 50% / var(--tw-text-opacity, 1));
 }
 
+.text-gray-300{
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-400{
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity, 1));
+}
+
 .text-red-500{
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity, 1));
@@ -1464,6 +1600,12 @@ input[type="checkbox"]:checked + label.ico-faq::after{
 
 .no-underline{
   text-decoration-line: none;
+}
+
+.shadow-2xl{
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-lg{
@@ -1500,6 +1642,10 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.duration-300{
+  transition-duration: 300ms;
 }
 
 .max-width-container{
@@ -1545,6 +1691,11 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   background-color: hsl(216 100% 36.7% / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-gray-700:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:text-bs-blue-800:hover{
   --tw-text-opacity: 1;
   color: hsl(216 100% 27.1% / var(--tw-text-opacity, 1));
@@ -1565,8 +1716,33 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   color: hsl(0 0% 100% / var(--tw-text-opacity, 1));
 }
 
+.hover\:text-white:hover{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
 .hover\:underline:hover{
   text-decoration-line: underline;
+}
+
+.focus\:outline-none:focus{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.focus\:ring-2:focus{
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus\:ring-inset:focus{
+  --tw-ring-inset: inset;
+}
+
+.focus\:ring-white:focus{
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity, 1));
 }
 
 .active\:bg-bs-blue-800:active{
@@ -1625,6 +1801,18 @@ input[type="checkbox"]:checked + label.ico-faq::after{
 }
 
 @media (min-width: 26rem){
+  .sm\:ml-6{
+    margin-left: 1.5rem;
+  }
+
+  .sm\:block{
+    display: block;
+  }
+
+  .sm\:hidden{
+    display: none;
+  }
+
   .sm\:grid-rows-1{
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
@@ -1830,6 +2018,11 @@ input[type="checkbox"]:checked + label.ico-faq::after{
 
   .lg\:grid-rows-2{
     grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:px-12{
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .lg\:first\:col-span-1:first-child{

@@ -1,14 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Mobile menu toggle
-    const mobileMenuButton = document.querySelector(
-        'button[aria-controls="mobile-menu"]'
-    );
+    const mobileMenuButton = document.querySelector('button[aria-controls="mobile-menu"]');
     const mobileMenuIcons = mobileMenuButton.querySelectorAll("svg");
     const mobileMenu = document.getElementById("mobile-menu");
+    const nav = document.getElementById("nav");
 
     mobileMenuButton.addEventListener("click", () => {
-        const isExpanded =
-            mobileMenuButton.getAttribute("aria-expanded") === "true";
+        const isExpanded = mobileMenuButton.getAttribute("aria-expanded") === "true";
         mobileMenuButton.setAttribute("aria-expanded", !isExpanded);
 
         // Toggle the visibility of menu icons
@@ -20,31 +18,36 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // User profile dropdown
-    const userMenuButton = document.getElementById("user-menu-button");
-    const userMenu = userMenuButton.nextElementSibling;
+    // Add background when user scrolls
+    let oldScrollPos = 0;
+    document.addEventListener("scroll", () => {
+        let scrollPos = window.scrollY;
+        let navList = document.querySelectorAll("nav-item");
 
-    userMenuButton.addEventListener("click", () => {
-        const isExpanded =
-            userMenuButton.getAttribute("aria-expanded") === "true";
-        userMenuButton.setAttribute("aria-expanded", !isExpanded);
+        if (scrollPos === 0) {
+            nav.classList.remove("bg-bs-white", "shadow-2xl");
+            nav.classList.add("bg-none", "pt-12", "transition-all");
+        } else if (scrollPos > 40) {
+            nav.classList.add("bg-bs-white", "shadow-2xl");
+            nav.classList.remove("bg-none", "pt-12", "transition-all");
 
-        // Show/hide the dropdown menu
-        if (userMenu) {
-            userMenu.classList.toggle("hidden");
+            navList.forEach((li) => {
+                li.classList.add("bg-red-400");
+                console.log(li);
+            });
+
+            // TODO: finish mobile hide / show of navbar
+
+            // if (oldScrollPos > scrollPos) {
+            //     // Scrolled down
+            //     nav.classList.add("translate-y-0");
+            //     nav.classList.remove("translate-y-[-100%]");
+            // } else if (oldScrollPos < scrollPos) {
+            //     // Scrolled up
+            //     nav.classList.remove("translate-y-0");
+            //     nav.classList.add("translate-y-[-100%]");
+            // }
         }
-    });
-
-    // Close the dropdown menu if clicked outside
-    document.addEventListener("click", (event) => {
-        if (
-            !userMenuButton.contains(event.target) &&
-            !userMenu.contains(event.target)
-        ) {
-            if (!userMenu.classList.contains("hidden")) {
-                userMenu.classList.add("hidden");
-                userMenuButton.setAttribute("aria-expanded", "false");
-            }
-        }
+        oldScrollPos = scrollPos;
     });
 });

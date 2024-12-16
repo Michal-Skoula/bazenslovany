@@ -61,6 +61,10 @@ module.exports = {
             gridTemplateRows: {
                 "showcase-grid": "repeat(5, minmax(25vw)",
             },
+            maxWidth: {
+                content: "68.75rem",
+                article: "45rem",
+            },
         },
     },
     plugins: [],

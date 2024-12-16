@@ -8,6 +8,69 @@
         <script defer src="app.js"></script>
     </head>
     <body>
+        <nav id="nav" class="fixed w-full z-20 py-4 lg:px-12 md:px-8 px-4 transition-all duration-300 pt-12 translate-y-0">
+            <div class="mx-auto max-w-content">
+                <div class="flex h-16 items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="flex shrink-0 items-center">
+                            <img class="h-16 w-auto" src="../assets/logo-bazen.png" alt="Your Company" />
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <div class="hidden sm:ml-6 sm:block">
+                            <div class="flex space-x-4">
+                                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                                <!-- <a href="#" class="rounded-md mb-0 bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Dashboard</a>
+                                <a href="#" class="rounded-md mb-0 px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
+                                <a href="#" class="rounded-md mb-0 px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
+                                <a href="#" class="rounded-md mb-0 px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a> -->
+                                <ul class="flex justify-between gap-6 mb-0">
+                                    <li class="list-none"><a class="nav-item dropdown no-underline hover:underline list-none text-bs-white hover:text-bs-grey-300 active:text-bs-grey-400 visited:text-bs-white font-normal" href="#">Test</a></li>
+                                    <li class="list-none"><a class="nav-item dropdown no-underline hover:underline list-none text-bs-white hover:text-bs-grey-300 active:text-bs-grey-400 visited:text-bs-white font-normal" href="#">Test</a></li>
+                                    <li class="list-none"><a class="nav-item dropdown no-underline hover:underline list-none text-bs-white hover:text-bs-grey-300 active:text-bs-grey-400 visited:text-bs-white font-normal" href="#">Test</a></li>
+                                    <li class="list-none"><a class="nav-item dropdown no-underline hover:underline list-none text-bs-white hover:text-bs-grey-300 active:text-bs-grey-400 visited:text-bs-white font-normal" href="#">Test</a></li>
+                                    <li class="list-none"><a class="nav-item dropdown no-underline hover:underline list-none text-bs-white hover:text-bs-grey-300 active:text-bs-grey-400 visited:text-bs-white font-normal" href="#">Test</a></li>
+                                    <li class="list-none"><a class="nav-item ico-phone no-underline hover:underline list-none text-bs-white hover:text-bs-grey-300 active:text-bs-grey-400 visited:text-bs-white font-normal" href="#">Test</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Mobile menu button-->
+                    <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white sm:hidden" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <!--
+                        Icon when menu is closed.
+            
+                        Menu open: "hidden", Menu closed: "block"
+                        -->
+                        <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <!--
+                        Icon when menu is open.
+            
+                        Menu open: "block", Menu closed: "hidden"
+                        -->
+                        <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="sm:hidden" id="mobile-menu">
+                <div class="space-y-1 px-2 pb-3 pt-2">
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                    <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Dashboard</a>
+                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
+                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
+                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+                </div>
+            </div>
+        </nav>
+
         <!-- <nav class="max-width-container flex fixed w-full top-0 justify-between items-center py-6 sm:py-12 z-20">
         <a href="#">
             <img class="h-16 w-16 aspect-square" src="../assets/logo-bazen.png" alt="Logo bazén Slovany">
@@ -27,9 +90,9 @@
                     <p class="text-bs-yellow font-semibold text-h5 ml-[0.125rem] mb-0">Bazen Slovany</p>
                     <h1>Plavecký areál města Plzně</h1>
                     <p class="text-bs-grey-300 max-w-[45rem]">Bazén Slovany v Plzni je ideálním místem pro relaxaci a sportovní aktivity. Nabízí moderní zázemí s plaveckým bazénem, saunou a vířivkou, což zaručuje zábavu a odpočinek pro všechny věkové kategorie.</p>
-                    <div class="flex gap-4 items-center mt-8">
+                    <div class="flex gap-y-4 items-center mt-8 flex-wrap">
                         <a role="button" class="inline-block text-bs-white hover:text-bs-white active:text-bs-white visited:text-bs-white bg-bs-blue-600 hover:bg-bs-blue-700 active:bg-bs-blue-800 font-normal px-8 py-3 rounded-full no-underline transition-all motion-reduce:transition-none" href="#">Objevte možnosti</a>
-                        <a class="ico-link-arrow font-medium text-bs-grey-300 hover:text-bs-grey-200 active:text-bs-grey-100 visited:text-bs-grey-300" href="#">Více o bazénu</a>
+                        <a class="ml-4 ico-link-arrow font-medium text-bs-grey-300 hover:text-bs-grey-200 active:text-bs-grey-100 visited:text-bs-grey-300" href="#">Více o bazénu</a>
                     </div>
                 </div>
             </header>
@@ -41,8 +104,8 @@
                             <h2>Aktuality</h2>
                         </div>
                         <div class="flex flex-wrap gap-3 md:order-2 order-1">
-                            <p class="md:inline-block flex text-bs-white bg-bs-blue-600 md:px-8 md:py-4 rounded-sm transition-colors flex-col px-3 py-3 shadow-lg"><b>Bazén:</b> Vyšší vytíženost</p>
-                            <p class="md:inline-block flex text-bs-white bg-bs-blue-700 md:px-8 md:py-4 rounded-sm transition-colors flex-col px-6 py-3 shadow-lg"><b>Sauna:</b> 10/30 obsazeno</p>
+                            <p class="md:inline-block flex text-bs-white bg-bs-blue-600 md:px-8 md:py-4 rounded-sm transition-colors flex-col px-4 py-3 shadow-lg"><b>Bazén:</b> Vyšší vytíženost</p>
+                            <p class="md:inline-block flex text-bs-white bg-bs-blue-700 md:px-8 md:py-4 rounded-sm transition-colors flex-col px-4 py-3 shadow-lg"><b>Sauna:</b> 10/30 obsazeno</p>
                         </div>
                     </div>
                     <div class="grid gap-6 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
