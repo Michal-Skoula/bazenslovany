@@ -1,0 +1,6 @@
+{
+    "editor.indentSize": "tabSize",
+    "[html]": {
+        "editor.tabSize": 4
+    }
+}

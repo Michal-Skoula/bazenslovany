@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bazen komponenty</title>
+    <link rel="stylesheet" href="tailwind-output.css">
+
+</head>
+<body>
+    <section>
+        <div class="max-width-blog-container">
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <p>Paragraph</p>
+            <p>Platnost permanentky je 1 rok od data <strong>vystavení</strong> či jejího znovunabití.</p>
+            <small>Small</small>
+            <blockquote>Permanentní vstupenka - čerpání po minutách. Je platná v plaveckém areálu bazén Slovany i bazén Lochotín (neplatí do sauny na Slovanech, je určena především na plavání) za cenu 1,- Kč / minuta s možností dobití od 500 minut (500,- Kč) a více. Např. 1 hodina plavání = 60,- Kč.</blockquote>
+            <aside class="p-8 bg-bs-blue-150 rounded-lg border-l-4 border-l-blue-500 my-4">
+                <strong class="inline-block text-h5 text-bs-blue-600 text-medium mb-1.5">Callout</strong>
+                <p class="text-bs-blue-900">Callout body</p>
+            </aside>
+            <aside class="p-8 bg-red-200 rounded-lg border-l-4 border-l-red-500 my-4">
+                <strong class="inline-block text-h5 text-red-500 text-medium mb-1.5">Vnitřní bazén uzavřený</strong>
+                <p class="text-red-900">Vnitřní bazén, <b>včetně atrakcí</b>, je z důvodu rekonstrukce uzavřen.</p>
+            </aside>
+            <aside class="p-8 bg-yellow-100 rounded-lg border-l-4 border-l-yellow-500 my-4">
+                <strong class="inline-block text-h5 text-yellow-500 text-medium mb-1.5">Callout</strong>
+                <p class="text-yellow-900">Za každou překročenou minutu je účtován doplatek 2,- Kč / minuta (při pobytu v bazénu) nebo 4,- Kč / minuta (při pobytu v sauně), a to bez ohledu na to, zda se jedná o zakoupené plné či slevové vstupné.</p>
+                <p class="text-yellow-900">Za ztrátu jakéhokoliv čipového náramku či karty je účtován poplatek 200,- Kč. Za nalezení a vrácení čipu po době pobytu v areálu se uhrazená částka nevrací.</p>
+                <p class="text-yellow-900">V případě opětovného nálezu čipového náramku či karty v době pobytu nebo nouzového otevření skříňky je účtován pouze manipulační poplatek 100,- Kč.</p>
+            </aside>
+            <p><strong>Bold Text Example</strong></p>
+            <p><em>Italic Text Example</em></p>
+            <p><strong><em>Bold and Italic Text Example</em></strong></p>
+        
+            <hr>
+        
+            <ul>
+                <li>Unordered List Item 1</li>
+                <li>Unordered List Item 2
+                    <ul>
+                        <li>Nested Unordered Item 1</li>
+                        <li>Nested Unordered Item 2</li>
+                    </ul>
+                </li>
+            </ul>
+        
+            <ol>
+                <li>Ordered List Item 1</li>
+                <li>Ordered List Item 2
+                    <ol>
+                        <li>Nested Ordered Item 1</li>
+                        <li>Nested Ordered Item 2</li>
+                    </ol>
+                </li>
+            </ol>
+            <div class="overflow-x-auto"> <!-- ten overflow-x musí být na parent divu, jinak to nefunguje-->
+                <table>
+                    <tbody>
+                    <tr>
+                        <th></th>
+                        <th>do 1,5 hodiny</th>
+                        <th>do 3 hodin</th>
+                        <th>celodenní</th>
+                    </tr>
+                    <tr>
+                        <th>plné</th>
+                        <td>135 Kč</td>
+                        <td>250 Kč</td>
+                        <td>300 Kč</td>
+                    </tr>
+                    <tr>
+                        <th>slevové</th>
+                        <td>105 Kč</td>
+                        <td>200 Kč</td>
+                        <td>250 Kč</td>
+                    </tr>
+                    <tr>
+                        <th>rodinné</th>
+                        <td>375 Kč</td>
+                        <td>700 Kč</td>
+                        <td>850 Kč</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <a role="button" class="inline-block text-bs-white hover:text-bs-white active:text-bs-white visited:text-bs-white bg-bs-blue-600 hover:bg-bs-blue-700 active:bg-bs-blue-800 font-normal px-6 py-3 rounded-full no-underline transition-all motion-reduce:transition-none" href="#">Objevte možnosti</a>
+        </div>
+    </section>
+    <!-- Modra highlight sekce -->
+    <section class="bg-bs-blue-150">
+        <div class="max-width-blog-container">
+            <h3>Slevové vstupné platí pro</h3>
+            <ol>
+                <li> děti od 122 cm do 15 let věku</li>
+                <li> studující řádného studia od 15 do 26 let věku - nutno prokázat žákovským nebo studentským průkazem současně s obč. průkazem (JIS karta, ISIC).</li>
+                <li> důchodce – nutno se prokázat potvrzením o pobírání starobního důchodu</li>
+                <li> senioři od 60 let věku – nutno věk prokázat občanským průkazem</li>
+                <li> držitele průkazu ZTP - nutno předložit platný průkaz ZTP</li>
+                <li> držitele zlaté Jánského plakety - nutno předložit průkaz držitele</li>
+            </ol>
+        </div>
+    </section>
+    <section>
+        <div class="max-width-blog-container">
+            <hr>
+
+            <p><strong>Link Example:</strong> Visit <a href="https://www.openai.com">OpenAI</a> for more information.</p>
+
+            <p><strong>Anchor Example:</strong></p>
+            <p>Jump to <a href="#main-heading">Main Heading</a>.</p>
+
+            <hr>
+
+            <p><strong>Image Example:</strong></p>
+            <img src="https://via.placeholder.com/150" alt="Dummy Image">
+        </div>
+    </section>
+</body>
+</html>
+
+
