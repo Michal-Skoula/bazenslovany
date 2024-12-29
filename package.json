@@ -8,6 +8,6 @@
         "tailwindcss": "^3.4.16"
     },
     "scripts": {
-        "dev": "npx tailwindcss -i ./src/tailwind-input.css -o ./src/tailwind-output.css --watch"
+        "build": "npx tailwindcss -i ./src/tailwind-input.css -o ./src/tailwind-output.css --watch"
     }
 }

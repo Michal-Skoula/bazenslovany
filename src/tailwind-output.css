@@ -558,6 +558,7 @@ video {
 
 * {
   font-family: "Plus Jakarta Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -693,9 +694,9 @@ body,
   max-width: 100%;
 }
 
-nav {
-  /* left: 50%;
-        transform: translateX(-50%); */
+nav li{
+  margin-left: 0px;
+  list-style-type: none;
 }
 
 header *{
@@ -809,6 +810,10 @@ img{
   --tw-bg-opacity: 0.4;
 }
 
+address {
+  font-style: unset;
+}
+
 footer {
   h2,
         h3,
@@ -854,24 +859,16 @@ footer {
   }
 }
 
-.dropdown::after {
-  content: url(../assets/ico-dropdown.svg);
-  position: relative;
-  bottom: 0.125rem;
-  display: inline-block;
-  width: 0.625rem;
-  padding-left: 0.5rem;
-}
-
 .bg-image {
   background-image: url(../assets/hero.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 #hero::before {
   content: "";
-  background: linear-gradient(132.498deg, rgba(19, 19, 19, 66%) 62%, rgba(19, 19, 19, 36%) 89%, rgba(19, 19, 19, 0%) 100%);
+  background: linear-gradient(132.498deg, rgba(19, 19, 19, 72%) 62%, rgba(19, 19, 19, 42%) 89%, rgba(19, 19, 19, 0%) 100%);
   pointer-events: none;
   position: absolute;
   top: 0px;
@@ -895,6 +892,7 @@ footer {
 
 .ico-link-arrow::after {
   content: "⟶";
+  /* content: "➔"; */
   text-decoration: none;
   padding-left: 0.25rem;
   transition: padding 150ms ease-in-out;
@@ -926,16 +924,18 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.sr-only{
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+.tel::before {
+  content: url(../assets/ico-call.svg);
+  position: relative;
+  top: 0.125rem;
+  margin-right: 0.5rem;
+}
+
+.mail::before {
+  content: url(../assets/ico-mail.svg);
+  position: relative;
+  top: 0.125rem;
+  margin-right: 0.5rem;
 }
 
 .fixed{
@@ -950,20 +950,12 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   position: relative;
 }
 
-.-inset-0\.5{
-  inset: -0.125rem;
-}
-
 .bottom-0{
   bottom: 0px;
 }
 
 .left-0{
   left: 0px;
-}
-
-.top-0{
-  top: 0px;
 }
 
 .z-10{
@@ -998,6 +990,10 @@ input[type="checkbox"]:checked + label.ico-faq::after{
 
 .mb-0{
   margin-bottom: 0px;
+}
+
+.mb-1{
+  margin-bottom: 0.25rem;
 }
 
 .mb-1\.5{
@@ -1044,6 +1040,10 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   margin-top: 2rem;
 }
 
+.mt-\[0\.17rem\]{
+  margin-top: 0.17rem;
+}
+
 .block{
   display: block;
 }
@@ -1080,17 +1080,17 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   aspect-ratio: 16/9;
 }
 
-.aspect-square{
-  aspect-ratio: 1 / 1;
-}
-
-.size-6{
-  width: 1.5rem;
-  height: 1.5rem;
+.size-8{
+  width: 2rem;
+  height: 2rem;
 }
 
 .h-16{
   height: 4rem;
+}
+
+.h-\[50rem\]{
+  height: 50rem;
 }
 
 .h-full{
@@ -1099,10 +1099,6 @@ input[type="checkbox"]:checked + label.ico-faq::after{
 
 .min-h-72{
   min-height: 18rem;
-}
-
-.w-16{
-  width: 4rem;
 }
 
 .w-80{
@@ -1131,11 +1127,6 @@ input[type="checkbox"]:checked + label.ico-faq::after{
 
 .translate-y-0{
   --tw-translate-y: 0px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-y-\[-100\%\]{
-  --tw-translate-y: -100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1343,19 +1334,9 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   background-color: hsl(0 0% 100% / var(--tw-bg-opacity, 1));
 }
 
-.bg-gray-900{
-  --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
-}
-
 .bg-red-200{
   --tw-bg-opacity: 1;
   background-color: rgb(254 202 202 / var(--tw-bg-opacity, 1));
-}
-
-.bg-red-400{
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 113 113 / var(--tw-bg-opacity, 1));
 }
 
 .bg-yellow-100{
@@ -1369,10 +1350,6 @@ input[type="checkbox"]:checked + label.ico-faq::after{
 
 .bg-opacity-45{
   --tw-bg-opacity: 0.45;
-}
-
-.bg-none{
-  background-image: none;
 }
 
 .object-cover{
@@ -1411,11 +1388,6 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   padding-right: 5rem;
 }
 
-.px-3{
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
 .px-4{
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1431,11 +1403,6 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   padding-right: 2rem;
 }
 
-.py-2{
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -1444,16 +1411,6 @@ input[type="checkbox"]:checked + label.ico-faq::after{
 .py-4{
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.py-48{
-  padding-top: 12rem;
-  padding-bottom: 12rem;
-}
-
-.py-6{
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
 }
 
 .py-8{
@@ -1469,25 +1426,20 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   padding-bottom: 1.5rem;
 }
 
-.pt-12{
-  padding-top: 3rem;
-}
-
-.pt-2{
-  padding-top: 0.5rem;
-}
-
 .pt-4{
   padding-top: 1rem;
+}
+
+.pt-6{
+  padding-top: 1.5rem;
 }
 
 .text-center{
   text-align: center;
 }
 
-.text-base{
-  font-size: 1rem;
-  line-height: 1.5rem;
+.text-\[1\.05rem\]{
+  font-size: 1.05rem;
 }
 
 .text-h4{
@@ -1496,11 +1448,6 @@ input[type="checkbox"]:checked + label.ico-faq::after{
 
 .text-h5{
   font-size: 1.15rem;
-}
-
-.text-sm{
-  font-size: 0.875rem;
-  line-height: 1.25rem;
 }
 
 .font-bold{
@@ -1517,6 +1464,15 @@ input[type="checkbox"]:checked + label.ico-faq::after{
 
 .font-semibold{
   font-weight: 600;
+}
+
+.tracking-normal{
+  letter-spacing: 0em;
+}
+
+.text-bs-black{
+  --tw-text-opacity: 1;
+  color: hsl(0 0% 6.3% / var(--tw-text-opacity, 1));
 }
 
 .text-bs-blue-600{
@@ -1539,6 +1495,11 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   color: hsl(215 100% 12% / var(--tw-text-opacity, 1));
 }
 
+.text-bs-grey-200{
+  --tw-text-opacity: 1;
+  color: hsl(0 0% 90.2% / var(--tw-text-opacity, 1));
+}
+
 .text-bs-grey-300{
   --tw-text-opacity: 1;
   color: hsl(0 0% 80% / var(--tw-text-opacity, 1));
@@ -1557,16 +1518,6 @@ input[type="checkbox"]:checked + label.ico-faq::after{
 .text-bs-yellow{
   --tw-text-opacity: 1;
   color: hsl(50 100% 50% / var(--tw-text-opacity, 1));
-}
-
-.text-gray-300{
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity, 1));
-}
-
-.text-gray-400{
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity, 1));
 }
 
 .text-red-500{
@@ -1600,12 +1551,6 @@ input[type="checkbox"]:checked + label.ico-faq::after{
 
 .no-underline{
   text-decoration-line: none;
-}
-
-.shadow-2xl{
-  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-lg{
@@ -1664,6 +1609,10 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   margin-bottom: 0px;
 }
 
+.visited\:text-black:visited{
+  color: rgb(0 0 0 );
+}
+
 .visited\:text-bs-blue-800:visited{
   color: hsl(216 100% 27.1% );
 }
@@ -1691,11 +1640,6 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   background-color: hsl(216 100% 36.7% / var(--tw-bg-opacity, 1));
 }
 
-.hover\:bg-gray-700:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(55 65 81 / var(--tw-bg-opacity, 1));
-}
-
 .hover\:text-bs-blue-800:hover{
   --tw-text-opacity: 1;
   color: hsl(216 100% 27.1% / var(--tw-text-opacity, 1));
@@ -1706,19 +1650,14 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   color: hsl(0 0% 90.2% / var(--tw-text-opacity, 1));
 }
 
-.hover\:text-bs-grey-300:hover{
+.hover\:text-bs-grey-900:hover{
   --tw-text-opacity: 1;
-  color: hsl(0 0% 80% / var(--tw-text-opacity, 1));
+  color: hsl(0 0% 20% / var(--tw-text-opacity, 1));
 }
 
 .hover\:text-bs-white:hover{
   --tw-text-opacity: 1;
   color: hsl(0 0% 100% / var(--tw-text-opacity, 1));
-}
-
-.hover\:text-white:hover{
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .hover\:underline:hover{
@@ -1728,21 +1667,6 @@ input[type="checkbox"]:checked + label.ico-faq::after{
 .focus\:outline-none:focus{
   outline: 2px solid transparent;
   outline-offset: 2px;
-}
-
-.focus\:ring-2:focus{
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-}
-
-.focus\:ring-inset:focus{
-  --tw-ring-inset: inset;
-}
-
-.focus\:ring-white:focus{
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity, 1));
 }
 
 .active\:bg-bs-blue-800:active{
@@ -1755,9 +1679,9 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   color: hsl(216 100% 27.1% / var(--tw-text-opacity, 1));
 }
 
-.active\:text-bs-grey-400:active{
+.active\:text-bs-grey-800:active{
   --tw-text-opacity: 1;
-  color: hsl(0 0% 70.2% / var(--tw-text-opacity, 1));
+  color: hsl(0 0% 30.2% / var(--tw-text-opacity, 1));
 }
 
 .active\:text-bs-white:active{
@@ -1801,25 +1725,8 @@ input[type="checkbox"]:checked + label.ico-faq::after{
 }
 
 @media (min-width: 26rem){
-  .sm\:ml-6{
-    margin-left: 1.5rem;
-  }
-
-  .sm\:block{
-    display: block;
-  }
-
-  .sm\:hidden{
-    display: none;
-  }
-
   .sm\:grid-rows-1{
     grid-template-rows: repeat(1, minmax(0, 1fr));
-  }
-
-  .sm\:py-12{
-    padding-top: 3rem;
-    padding-bottom: 3rem;
   }
 }
 
@@ -2027,5 +1934,19 @@ input[type="checkbox"]:checked + label.ico-faq::after{
 
   .lg\:first\:col-span-1:first-child{
     grid-column: span 1 / span 1;
+  }
+}
+
+@media (min-width: 75rem){
+  .nav\:ml-6{
+    margin-left: 1.5rem;
+  }
+
+  .nav\:block{
+    display: block;
+  }
+
+  .nav\:hidden{
+    display: none;
   }
 }

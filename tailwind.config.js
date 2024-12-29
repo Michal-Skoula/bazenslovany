@@ -57,6 +57,7 @@ module.exports = {
                 sm: "26rem",
                 md: "35rem",
                 lg: "52rem",
+                nav: "75rem",
             },
             gridTemplateRows: {
                 "showcase-grid": "repeat(5, minmax(25vw)",
