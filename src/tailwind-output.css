@@ -903,6 +903,19 @@ footer {
   padding-left: 0.6rem;
 }
 
+.ico-link-external {
+  display: flex;
+  align-content: start;
+}
+
+.ico-link-external::after {
+  content: url(../assets/ico-link-external.svg);
+  top: 0px;
+  right: 0px;
+  padding-left: 0.15rem;
+  line-height: 0.75rem;
+}
+
 .ico-faq::after {
   content: url(../assets/ico-open-right.svg);
   position: absolute;
@@ -1089,8 +1102,8 @@ input[type="checkbox"]:checked + label.ico-faq::after{
   height: 4rem;
 }
 
-.h-\[50rem\]{
-  height: 50rem;
+.h-\[45rem\]{
+  height: 45rem;
 }
 
 .h-full{
